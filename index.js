@@ -16,7 +16,7 @@ let playerEl = document.getElementById("player-el")
 playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
-    let randomNumber = Math.floor(Math.random() * 13) + 1 // math.random kat3tik number mn 0,000 htal 1 and math.floor katrje3 number bla decimal 
+    let randomNumber = Math.floor(Math.random() * 13) + 1  
     // if 1     -> return 11
     // if 11-13 -> return 10
     if (randomNumber > 10) {
@@ -39,7 +39,7 @@ function startGame() {
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: "   // textContent katkteb lik l value dial variable wla id w katdir lik hta center lketba
+    cardsEl.textContent = "Cards: "   
     for (let i = 0; i < cards.length; i += 1) {
         cardsEl.textContent += cards[i] + " "
     }
@@ -53,14 +53,13 @@ function renderGame() {
         message = "You're out of the game!"
         isAlive = false
     }
-    messageEl.textContent = message // hna textContent direct at3tini value li kayna f messgae
-}
+    messageEl.textContent = message 
 
 function newCard() {
     if (isAlive === true && hasBlackJack === false) {
         let card = getRandomCard()
         sum += card
-        cards.push(card) // hna dert push bash tzad value dial card ela values li kaynin f Var cards
+        cards.push(card) 
         renderGame()
     }
 
